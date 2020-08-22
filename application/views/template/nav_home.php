@@ -18,10 +18,8 @@
               <li><a href="#">Struktur</a></li>
             </ul>
           </li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Magazine</a></li>
+          <li><a href="#">Events</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>

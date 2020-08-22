@@ -10,7 +10,7 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/home/img/events-1.jpg" alt="...">
+                <img src="<?= base_url()?>assets/home/img/events/no-image.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
@@ -22,7 +22,7 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/home/img/events-2.jpg" alt="...">
+                <img src="<?= base_url()?>assets/home/img/events/no-image.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Marketing Strategies</a></h5>

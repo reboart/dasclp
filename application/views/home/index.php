@@ -1,14 +1,26 @@
 
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talanted designers making websites with Bootstrap</h2>
-      <a href="courses.html" class="btn-get-started">Get Started</a>
+<div id="carouselExampleInterval" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <img src="<?= base_url('assets/home/img/')?>belajar.png" class="d-block w-100" alt="...">
     </div>
-  </section><!-- End Hero -->
-
+    <div class="carousel-item" data-interval="2000">
+      <img src="<?= base_url('assets/home/img/')?>berjuang.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?= base_url('assets/home/img/')?>bertaqwa.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  
   <main id="main">
 
     <!-- ======= Counts Section ======= -->
@@ -41,5 +53,6 @@
 
       </div>
     </section><!-- End Counts Section -->
+    
 
 

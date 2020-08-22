@@ -48,33 +48,36 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="#" data-toggle="modal" data-target="#logoutModal">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Logout</span>
         </a>
       </li>
 
-      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= base_url('admin')?>/layout">
+          <i class="fas fa-th-large fa-sm fa-fw"></i>
+          <span>Layout</span>
+        </a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Pages Collapse Menu -->
+       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-database"></i>
-          <span>Data Base</span>
+        <a class="nav-link collapsed" href="<?= base_url('admin')?>/setting">
+          <i class="fas fa-cogs fa-sm fa-fw"></i>
+          <span>Setting</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url('user/enter');?>">New</a>
-            <a class="collapse-item" href="<?= base_url('user/database');?>">All Data Base</a>
-          </div>
-        </div>
       </li>
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="<?=base_url('auth/logout');?>" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-pen-square"></i>
           <span>Post Artikel</span>
         </a>

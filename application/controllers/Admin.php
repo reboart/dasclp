@@ -104,7 +104,7 @@ class Admin extends CI_Controller {
 			$this->load->view('template/header',$data);
 			$this->load->view('template/sidebar',$data);
 			$this->load->view('template/topbar',$data);
-			$this->load->view('admin/menu/index',$data);
+			$this->load->view('admin/options/menu/index',$data);
 			$this->load->view('template/footer');
 		}else {
 
@@ -128,19 +128,54 @@ class Admin extends CI_Controller {
 
 	}
 
-	public function editmenu($id){
-		$data['useredit'] = $this->db->get_where('user_menu');
-		$data = [
+	public function edit($id)
+	{
+		
+		
+		$this->load->model('menu_model');
+		$id = $this->uri->segment(3);
+		
+		$data = array(
 
-				'title' => htmlspecialchars($this->input->post('usermenu',true)),
-				'url'	=> htmlspecialchars($this->input->post('url',true)),
-				'icon'	=> htmlspecialchars($this->input->post('icon',true)),
-				'in_active'	=> 1,
+			'title' 	=> 'Edit Data Menu',
+			'menu_edit' => $this->menu_model->edit($id),
+			'user' => $this->menu_model->user(),
+			
 
-			];
+		);
 
-		$this->db->where('id',$id); 
-		$this->db->update('user_menu',$data); 
+		$data['user'] = $this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar',$data);
+		$this->load->view('template/topbar',$data);
+		$this->load->view('admin/options/menu/edit',$data);
+		$this->load->view('template/footer');
+		
+	}
+
+	public function update()
+	{
+		$this->load->model('menu_model');
+		$id = $this->input->post('id');
+		$data = array(
+        'menu_id' => $this->input->post('menuid'),
+		'title' => $this->input->post('usermenu'),
+		'url'	=> $this->input->post('url'),
+		'icon'	=> $this->input->post('icon'),
+		'in_active'	=> 1
+);
+		$where = array(
+			'id' => $id
+		);
+
+
+$this->menu_model->update($where, $data, 'user_menu');
+
+$this->session->set_flashdata('massage', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate didatabase.
+			                                    </div>');
+
+		//redirect
+		redirect('admin/menu');
 	}
 	// Delete Menu
 
@@ -152,6 +187,30 @@ class Admin extends CI_Controller {
 
 			$this->session->set_flashdata('massage','<div class="alert alert-success" role="alert">Delete Menu Success!</div>');
 				redirect('admin/menu');
+	}
+
+	public function setting()
+	{
+		$data['title']='setting';
+		$data['user'] = $this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
+
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar',$data);
+		$this->load->view('template/topbar',$data);
+		$this->load->view('admin/options/setting',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function layout()
+	{
+		$data['title']='Layout';
+		$data['user'] = $this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
+
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar',$data);
+		$this->load->view('template/topbar',$data);
+		$this->load->view('admin/options/layout/layout',$data);
+		$this->load->view('template/footer');
 	}
 
 

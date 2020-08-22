@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class home extends CI_Controller {
+class Home extends CI_Controller {
 
 	public function index() {
 
@@ -15,7 +15,6 @@ class home extends CI_Controller {
 		$this->load->view('home/bbb',$data);
 		$this->load->view('home/events',$data);
 		$this->load->view('home/magazine',$data);
-		$this->load->view('home/profile',$data);
 		$this->load->view('home/ktmereka',$data);
 		$this->load->view('template/footer_home',$data);
 	}

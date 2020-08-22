@@ -32,10 +32,10 @@
 		      				<th scope="row"><?=$i?></th>
 		      				<td><?= $um['title'];?></td>
 		      				<td><?= $um['url'];?></td>
-		      				<td><?= $um['icon'];?></td>
+		      				<td><i class="<?= $um['icon'];?>"></i></td>
 		      				<td><?= $um['in_active'];?></td>
 		      				<td>
-		      					<a href="<?= $um['id'];?>" class="badge badge-success" data-toggle="modal" data-target="#editmenumodal">Edit</a>
+		      					<a href="<?= base_url("admin/edit/");?><?= $um['id'];?>" class="badge badge-success">Edit</a>
 		      					<a href="<?= base_url('admin');?>/deletemenu/<?= $um['id'];?>" class="badge badge-danger" onclick="return confirm('yakin');">Del</a>
 		      				</td>
 		      			</tr>

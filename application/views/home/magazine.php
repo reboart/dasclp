@@ -16,7 +16,6 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Kaderisasi</h4>
-                  <p class="price">$169</p>
                 </div>
 
                 <h3><a href="course-details.html">Pengkaderan Dimasa Sekarang</a></h3>
